@@ -14,7 +14,7 @@
             background-position: center;
             background-attachment: fixed;
             height: 100vh;
-            overflow: auto; /* Allow content to scroll if necessary */
+            overflow: auto; 
             display: flex;
             justify-content: center;
             align-items: center;
@@ -23,7 +23,7 @@
         .container {
             text-align: center;
             padding: 20px;
-            background: rgba(255, 255, 255, 0.8); /* semi-transparent white background */
+            background: rgba(255, 255, 255, 0.8); 
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
         }
@@ -56,13 +56,12 @@
             <button id="getWeather">Get Weather</button>
         </div>
         <div id="weatherInfo" class="weather-info">
-            <!-- Weather data will be displayed here -->
         </div>
     </div>
     <script>
         document.getElementById('getWeather').addEventListener('click', function() {
             const city = document.getElementById('city').value;
-            const apiKey = 'a92a9b86c5f11db11deeb117e2cae717'; // Your actual API key
+            const apiKey = 'a92a9b86c5f11db11deeb117e2cae717'; 
 
             fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`)
                 .then(response => response.json())
